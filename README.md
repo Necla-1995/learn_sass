@@ -1,3 +1,3 @@
 # learn_sass
 
-Sass derslerinden öğrendiklerimi alıştırma yapma amacıyla kurduğum repositories
+Sass derslerinden öğrendiklerimi alıştırma yapma amacıyla kurduğum klasör
