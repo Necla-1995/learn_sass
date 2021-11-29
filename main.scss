@@ -1,0 +1,75 @@
+*{
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+}
+$maincolor: pink;
+$header: rgb(255, 244, 86);
+$box1: rgb(71, 191, 221);
+$box2: #ffc966;
+$frame: rgb(138, 255, 138);
+$font1: rgb(154, 18, 167);
+$font2: rgb(48, 2, 48);
+
+@mixin border {
+    border: 3px solid rgb(141, 50, 50);
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: $box2;
+    float: left;
+    margin-right: 50px;
+}
+
+body{
+    background-color: $maincolor;
+    color:beige;
+    .container{
+        height: 1000px;
+        width: 1000px;
+        margin: 0px auto;
+        background-color: $frame;
+
+        header{
+            margin-bottom: 15px;
+            width: 1000px;
+            height: 45px;
+            background-color: $header;
+            ul{
+                li{
+                    float: left;
+                    a{
+                        display: block;
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: center;
+                        width: 150px;
+                        text-decoration: none;
+                        font-size: 20px;
+                        color: $font1;
+                        &:hover{
+                            color: $font2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .boxes{
+            height: 500px;
+            width: 500px;
+            margin: 0px auto;
+            background-color: $box1;
+        }
+        .box1{
+            @extend .box;
+            @include border();
+        }
+        .box2{
+            @extend .box;
+            @include border();
+        }
+    }
+}
